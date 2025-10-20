@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata minClientVersion="2.12">
     <id>MailKit</id>
-    <version>4.13.0</version>
+    <version>4.14.1</version>
     <title>MailKit</title>
     <authors>Jeffrey Stedfast</authors>
     <owners>Jeffrey Stedfast</owners>
@@ -26,9 +26,9 @@ Features include:
     </description>
     <summary>An Open Source .NET mail-client library for Windows, Mac, Linux, and mobile platforms such as iOS and Android.</summary>
     <releaseNotes>
-* Fixed tokenization of IMAP atom tokens that start with '+'. (issue #1914)
-* Fixed the Imap/Pop3/Smtp clients to no longer fallback to using the ServicePointManager.ServerCertificateValidationCallback method on .NET Core. (issue #1925)
-* Bumped MimeKit dependency to 4.13.0.
+* Re-added NTLM to the list of mechanisms to try by default. (issue #1953)
+* Fixed IMAP to treat '+' as a normal Atom token. (issue #1956)
+* Added fallback logic for imap.strato.de if LIST doesn't return the INBOX. (issue #1957)
     </releaseNotes>
     <copyright>.NET Foundation and Contributors</copyright>
     <language>en-US</language>
@@ -56,30 +56,30 @@ Features include:
       <group targetFramework="net462">
         <dependency id="System.Formats.Asn1" version="8.0.1" />
         <dependency id="System.Threading.Tasks.Extensions" version="4.6.0" />
-        <dependency id="MimeKit" version="4.13.0" />
+        <dependency id="MimeKit" version="4.14.0" />
       </group>
       <group targetFramework="net47">
         <dependency id="System.Formats.Asn1" version="8.0.1" />
         <dependency id="System.Threading.Tasks.Extensions" version="4.6.0" />
-        <dependency id="MimeKit" version="4.13.0" />
+        <dependency id="MimeKit" version="4.14.0" />
       </group>
       <group targetFramework="net48">
         <dependency id="System.Formats.Asn1" version="8.0.1" />
         <dependency id="System.Threading.Tasks.Extensions" version="4.6.0" />
-        <dependency id="MimeKit" version="4.13.0" />
+        <dependency id="MimeKit" version="4.14.0" />
       </group>
       <group targetFramework="net8.0">
         <dependency id="System.Formats.Asn1" version="8.0.1" />
-        <dependency id="MimeKit" version="4.13.0" />
+        <dependency id="MimeKit" version="4.14.0" />
       </group>
       <group targetFramework="netstandard2.0">
         <dependency id="System.Formats.Asn1" version="8.0.1" />
         <dependency id="System.Threading.Tasks.Extensions" version="4.6.0" />
-        <dependency id="MimeKit" version="4.13.0" />
+        <dependency id="MimeKit" version="4.14.0" />
       </group>
       <group targetFramework="netstandard2.1">
         <dependency id="System.Formats.Asn1" version="8.0.1" />
-        <dependency id="MimeKit" version="4.13.0" />
+        <dependency id="MimeKit" version="4.14.0" />
       </group>
     </dependencies>
   </metadata>
